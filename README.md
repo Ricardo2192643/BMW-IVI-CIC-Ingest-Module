@@ -13,17 +13,24 @@ sudo fdisk -lu simao.001
 ![image](https://user-images.githubusercontent.com/33206506/190868473-71915f6d-47f4-4dc7-8b5b-ed00a7222fc1.png)
 
 sudo losetup --partscan --find --show simao.001
+
 ls -la /dev/loop0*
 
 ![image](https://user-images.githubusercontent.com/33206506/190868500-f224a0be-ebd0-4f17-8070-0af34065ef40.png)
 ![image](https://user-images.githubusercontent.com/33206506/190868506-6da54711-bcb4-4726-a9bd-a29524add5db.png)
 
 sudo mount -r -t qnx6 /dev/loop0p5 /home/kali/Desktop/bmwsimao/particao5/
+
 sudo mount -r -t qnx6 /dev/loop0p6 /home/kali/Desktop/bmwsimao/particao6/
+
 sudo mount -r -t qnx6 /dev/loop0p7 /home/kali/Desktop/bmwsimao/particao7/
+
 sudo mount -r -t qnx6 /dev/loop0p8 /home/kali/Desktop/bmwsimao/particao8/
+
 sudo mount -r -t qnx6 /dev/loop0p9 /home/kali/Desktop/bmwsimao/particao9/
+
 sudo mount -r -t qnx6 /dev/loop0p10 /home/kali/Desktop/bmwsimao/particao10/
+
 sudo mount -r -t qnx6 /dev/loop0p1 /home/kali/Desktop/bmwsimao/particao1/
 
 ![image](https://user-images.githubusercontent.com/33206506/190868527-3492bda0-7a7e-4960-924d-97e43f2287a1.png)
