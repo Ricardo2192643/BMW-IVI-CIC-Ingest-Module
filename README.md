@@ -36,6 +36,7 @@ sudo mount -r -t qnx6 /dev/loop0p1 /home/kali/Desktop/bmwsimao/particao1/
 ![image](https://user-images.githubusercontent.com/33206506/190868527-3492bda0-7a7e-4960-924d-97e43f2287a1.png)
 
 After all available partitions are mounted, one folder per partition is created, in this case I named each partition.
+
 ![image](https://user-images.githubusercontent.com/33206506/190868543-34ec45ae-1ec3-42d1-b853-a5a0c52ddd6e.png)
 
 Autopsy
