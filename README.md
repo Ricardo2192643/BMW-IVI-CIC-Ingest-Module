@@ -18,10 +18,10 @@ To mount the partitions we use Kali linux
 ### ls -la /dev/loop0*
 
 
-![image](https://user-images.githubusercontent.com/33206506/190868500-f224a0be-ebd0-4f17-8070-0af34065ef40.png)
+   ![image](https://user-images.githubusercontent.com/33206506/190868500-f224a0be-ebd0-4f17-8070-0af34065ef40.png)
 
 
-![image](https://user-images.githubusercontent.com/33206506/190868506-6da54711-bcb4-4726-a9bd-a29524add5db.png)
+   ![image](https://user-images.githubusercontent.com/33206506/190868506-6da54711-bcb4-4726-a9bd-a29524add5db.png)
 
 
 
