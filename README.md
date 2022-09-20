@@ -10,6 +10,7 @@ To mount the partitions we use Kali linux
  - We run the following commands:
 
 ### sudo fdisk -lu simao.001
+
 ![image](https://user-images.githubusercontent.com/33206506/190868473-71915f6d-47f4-4dc7-8b5b-ed00a7222fc1.png)
 
 ### sudo losetup --partscan --find --show simao.001
@@ -26,7 +27,7 @@ To mount the partitions we use Kali linux
 
 ### sudo mount -r -t qnx6 /dev/loop0p5 /home/kali/Desktop/bmwsimao/particao5/
 
-sudo mount -r -t qnx6 /dev/loop0p6 /home/kali/Desktop/bmwsimao/particao6/
+### sudo mount -r -t qnx6 /dev/loop0p6 /home/kali/Desktop/bmwsimao/particao6/
 
 ### sudo mount -r -t qnx6 /dev/loop0p7 /home/kali/Desktop/bmwsimao/particao7/
 
