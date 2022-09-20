@@ -39,7 +39,7 @@ After all available partitions are mounted, one folder per partition is created,
 
 ![image](https://user-images.githubusercontent.com/33206506/190868543-34ec45ae-1ec3-42d1-b853-a5a0c52ddd6e.png)
 
-Autopsy
+## Autopsy
 
 To load the partitions to the Autopsy tool, we first have to select what type of data we are going to select, in this case we choose Logical Files, to add the folders that correspond to each partition.
 
