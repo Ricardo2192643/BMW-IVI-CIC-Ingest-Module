@@ -1,7 +1,8 @@
-# Autopsy BMW-IVI-CIC-Ingest-Module 
+# Autopsy BMW-IVI-CIC-Ingest-Module
+
 ## Analysis of in-vehicle infotainment systems of BMW brand vehicles, in the 2010 and 2012 series 3 models, with IVI CIC systems
 
-As the Autopsy tool does not recognize the QNX file system, we have to mount the partitions and then manually load the partitions/folders to the autopsy tool and then do analysis with this ingest module.
+As the Autopsy tool does not support the QNX file system, it was necessary to manually mount the partitions using a Linux distribution and then manually load these partitions into Autopsy to perform the analysis.
 
 Mount the Partitions
 
@@ -42,11 +43,6 @@ To mount the partitions we use Kali linux
 
 ![image](https://user-images.githubusercontent.com/33206506/190868527-3492bda0-7a7e-4960-924d-97e43f2287a1.png)
 
-
-### After all available partitions are mounted, one folder per partition is created, in this case I named each partition
-
-
-![image](https://user-images.githubusercontent.com/33206506/190868543-34ec45ae-1ec3-42d1-b853-a5a0c52ddd6e.png)
 
 
 ## Autopsy
