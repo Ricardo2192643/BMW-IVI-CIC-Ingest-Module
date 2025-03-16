@@ -181,18 +181,6 @@ class CicIviBmwDbIngestModule(DataSourceIngestModule):
                     blackboard.indexArtifact(art)
                 except Blackboard.BlackboardException as e:
                     self.log(Level.SEVERE, "Error indexing artifact " + art.getDisplayName())
-                
-            # Fire an event to notify the UI and others that there are new artifacts
-            IngestServices.getInstance().fireModuleDataEvent(
-                ModuleDataEvent(CicIviBmwDbIngestModuleFactory.moduleName, 
-                BlackboardArtifact.ARTIFACT_TYPE.TSK_CONTACT, None))
-         
-        
-
-
-
-
-        
         
         #database conctactbook search contact phone
         
@@ -266,14 +254,6 @@ class CicIviBmwDbIngestModule(DataSourceIngestModule):
                     blackboard.indexArtifact(art)
                 except Blackboard.BlackboardException as e:
                     self.log(Level.SEVERE, "Error indexing artifact " + art.getDisplayName())
-                
-            # Fire an event to notify the UI and others that there are new artifacts
-            IngestServices.getInstance().fireModuleDataEvent(
-                ModuleDataEvent(CicIviBmwDbIngestModuleFactory.moduleName, 
-                BlackboardArtifact.ARTIFACT_TYPE.TSK_CONTACT, None))
-
-
-
 
         #database contactbook search contact email
         files = fileManager.findFiles(dataSource, "contactbook_%.db")
@@ -347,14 +327,7 @@ class CicIviBmwDbIngestModule(DataSourceIngestModule):
                     blackboard.indexArtifact(art)
                 except Blackboard.BlackboardException as e:
                     self.log(Level.SEVERE, "Error indexing artifact " + art.getDisplayName())
-                
-            # Fire an event to notify the UI and others that there are new artifacts
-            IngestServices.getInstance().fireModuleDataEvent(
-                ModuleDataEvent(CicIviBmwDbIngestModuleFactory.moduleName, 
-                BlackboardArtifact.ARTIFACT_TYPE.TSK_CONTACT, None))
-          
-
-          
+                          
         #database contactbook search contact address
         files = fileManager.findFiles(dataSource, "contactbook_%.db")
 
@@ -437,15 +410,7 @@ class CicIviBmwDbIngestModule(DataSourceIngestModule):
                     blackboard.indexArtifact(art)
                 except Blackboard.BlackboardException as e:
                     self.log(Level.SEVERE, "Error indexing artifact " + art.getDisplayName())
-                
-            # Fire an event to notify the UI and others that there are new artifacts
-            IngestServices.getInstance().fireModuleDataEvent(
-                ModuleDataEvent(CicIviBmwDbIngestModuleFactory.moduleName, 
-                BlackboardArtifact.ARTIFACT_TYPE.TSK_CONTACT, None))
-
-
-
-        
+                       
         #database contactbook search bluetooth
         
         files = fileManager.findFiles(dataSource, "contactbook_2010%.db")
@@ -577,10 +542,6 @@ class CicIviBmwDbIngestModule(DataSourceIngestModule):
                     except Blackboard.BlackboardException as e:
                         self.log(Level.SEVERE, "Error indexing artifact " + art.getDisplayName())
                     
-                # Fire an event to notify the UI and others that there are new artifacts
-                IngestServices.getInstance().fireModuleDataEvent(
-                    ModuleDataEvent(CicIviBmwDbIngestModuleFactory.moduleName, 
-                    BlackboardArtifact.ARTIFACT_TYPE.TSK_DEVICE_INFO, None))
             except SQLException as e:
                 self.log(Level.INFO, "Error querying database " +file.getParentPath()+file.getName() + " table (" + e.getMessage() + "). Ignoring this file and continuing ingest.")
                 #Miguel: esta instrucao deixa de ser necessaria.
@@ -648,12 +609,6 @@ class CicIviBmwDbIngestModule(DataSourceIngestModule):
                 except Blackboard.BlackboardException as e:
                     self.log(Level.SEVERE, "Error indexing artifact " + art.getDisplayName())
                 
-            # Fire an event to notify the UI and others that there are new artifacts
-            IngestServices.getInstance().fireModuleDataEvent(
-                ModuleDataEvent(CicIviBmwDbIngestModuleFactory.moduleName, 
-                BlackboardArtifact.ARTIFACT_TYPE.TSK_DEVICE_INFO, None))
-
-
         #mme library folders
         files = fileManager.findFiles(dataSource, "%mme_library")
 
@@ -720,14 +675,7 @@ class CicIviBmwDbIngestModule(DataSourceIngestModule):
                     blackboard.indexArtifact(art)
                 except Blackboard.BlackboardException as e:
                     self.log(Level.SEVERE, "Error indexing artifact " + art.getDisplayName())
-                
-            # Fire an event to notify the UI and others that there are new artifacts
-            IngestServices.getInstance().fireModuleDataEvent(
-                ModuleDataEvent(CicIviBmwDbIngestModuleFactory.moduleName, 
-                BlackboardArtifact.ARTIFACT_TYPE.TSK_DEVICE_INFO, None))
-        
-        
-        
+                        
         #Library albuns
 
         files = fileManager.findFiles(dataSource, "mme_library%")
@@ -789,12 +737,6 @@ class CicIviBmwDbIngestModule(DataSourceIngestModule):
                 except Blackboard.BlackboardException as e:
                     self.log(Level.SEVERE, "Error indexing artifact " + art.getDisplayName())
                 
-            # Fire an event to notify the UI and others that there are new artifacts
-            IngestServices.getInstance().fireModuleDataEvent(
-                ModuleDataEvent(CicIviBmwDbIngestModuleFactory.moduleName, 
-                BlackboardArtifact.ARTIFACT_TYPE.TSK_METADATA, None))
-
-
         #Library artists
         files = fileManager.findFiles(dataSource, "%mme_library%")
         artIIIIIId = blackboard.getOrAddArtifactType("TSK_LIBRARY_ARTISTS", "Library artists")
@@ -852,14 +794,7 @@ class CicIviBmwDbIngestModule(DataSourceIngestModule):
                     # index the artifact for keyword search
                     blackboard.indexArtifact(art)
                 except Blackboard.BlackboardException as e:
-                    self.log(Level.SEVERE, "Error indexing artifact " + art.getDisplayName())
-                
-            # Fire an event to notify the UI and others that there are new artifacts
-            IngestServices.getInstance().fireModuleDataEvent(
-                ModuleDataEvent(CicIviBmwDbIngestModuleFactory.moduleName, 
-                BlackboardArtifact.ARTIFACT_TYPE.TSK_METADATA, None))
-   
-        
+                    self.log(Level.SEVERE, "Error indexing artifact " + art.getDisplayName())  
 
         #Post a message to the ingest messages in box.
         message = IngestMessage.createMessage(IngestMessage.MessageType.DATA,
